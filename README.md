@@ -1,293 +1,210 @@
 # Black Excellence — WEDE5020 Website Project
 
+## Project overview
+
+Black Excellence is a fictional Durban-based sneaker and streetwear brand focused on premium, culturally inspired footwear. The website showcases the brand story, collections, product catalogue, and enquiry/contact experience for customers looking for modern street luxury with African heritage.
+
+This project was developed as a front-end web project for WEDE5020 and includes responsive design, dynamic product interactions, form validation, SEO enhancements, and a polished storefront experience.
+
 ## Student information
 
-- **Student:** Langelihle Amahle Ntshangase
-- **Student number:** **[INSERT STUDENT NUMBER BEFORE SUBMISSION]**
-- **Module:** WEDE5020 — Portfolio of Evidence (PoE)
-- **Stage:** Part 3 — Enhancing Functionality and SEO
-- **Chosen organisation:** Black Excellence (fictional Durban-based sneaker/streetwear brand)
-- **GitHub repository:** **[PASTE LECTURER-ASSIGNED PRIVATE REPOSITORY URL]**
-- **Published site URL:** **[PASTE VERIFIED NETLIFY OR OTHER DEPLOYMENT URL]**
+- Student: [Insert student name]
+- Student number: [Insert student number]
+- Module: WEDE5020 — Portfolio of Evidence (PoE)
+- Project stage: Part 3
+- Brand: Black Excellence
+- GitHub repository: [Insert repository URL]
+- Published website URL: [Insert Netlify or hosting URL]
+
+## Website goals
+
+- Present the Black Excellence brand clearly and professionally
+- Showcase premium sneaker collections in a user-friendly format
+- Provide dynamic storefront search and filtering
+- Allow visitors to enquire about products or contact the brand
+- Improve discoverability through SEO best practices
+- Create a responsive website that works across mobile, tablet, and desktop
+
+## Included pages
+
+- Home
+- About / Our Story
+- Shop / Products
+- Collections
+- Community
+- Enquiry
+- Contact
+- Thank You
+
+## Key features
+
+### Responsive design
+
+- Flexible layouts for mobile, tablet, and desktop
+- Mobile-friendly navigation and content structure
+- Responsive product cards, gallery items, and forms
+
+### Dynamic product catalog
+
+- Product search by name, colour, style, and category
+- Category filters such as low-top, high-top, and runner
+- Sorting by featured, price, and name
+- Product cards rendered from local JSON data with fallback content
+
+### Gallery lightbox
+
+- Product image modal/lightbox with larger preview
+- Keyboard navigation support
+- Close controls and focus return
+- Responsive image sizing and smooth interaction
+
+### Forms and validation
+
+- Product enquiry form with required inputs and validation
+- General contact form with validation and feedback
+- Clear user-friendly error messages
+- Immediate validation feedback on input and on submit
+- Email fallback for users who prefer to send via mail client
+
+### SEO and accessibility
+
+- Unique page titles and meta descriptions
+- Open Graph metadata for social sharing
+- Descriptive alt text on images
+- Semantic structure with meaningful headings
+- Skip link for keyboard users
+- Accessible form labels, focus states, and ARIA live regions
+
+## Tech stack
+
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- JSON data file for product catalog
+- Netlify-ready deployment configuration
+
+## Project structure
+
+BlackExcellence_WEDE5020_Part3/
+├── BlackExcellence_Part3_Website/
+│   ├── index.html
+│   ├── about.html
+│   ├── products.html
+│   ├── collections.html
+│   ├── community.html
+│   ├── enquiry.html
+│   ├── contact.html
+│   ├── thank-you.html
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   ├── netlify.toml
+│   ├── README.md
+│   ├── CHANGELOG.md
+│   ├── css/
+│   │   ├── styles.css
+│   │   └── part3.css
+│   ├── data/
+│   │   └── products.json
+│   ├── images/
+│   │   └── sneakers/
+│   ├── js/
+│   │   ├── logic.js
+│   │   └── main.js
+│   ├── docs/
+│   │   ├── PART3_DESIGN.md
+│   │   ├── SEO_NOTES.md
+│   │   └── SUBMISSION_CHECKLIST.md
+│   ├── screenshots/
+│   │   └── part3/
+│   └── tests/
+│       ├── logic.test.cjs
+│       ├── static_audit.py
+│       └── ui_smoke.py
+└──
 
-## Project Overview
+## Local setup
 
-Black Excellence is a Durban-based sneaker and streetwear brand inspired by African culture, identity and modern street fashion.
+1. Open the project folder in a code editor.
+2. Use a local HTTP server if needed, for example:
+   - Python:
+     python -m http.server 8000
+   - Or open the files directly in a browser for basic viewing.
+3. Visit the site in a browser at:
+   - http://localhost:8000
 
-The website includes:
+## Run checks
 
-Home
+The project includes JavaScript logic tests and validation checks.
 
-Our Story
+To run the logic tests:
 
-Shop
+node tests/logic.test.cjs
 
-Collections
+To run the JavaScript syntax check:
 
-Community
+node --check js/main.js
+node --check js/logic.js
 
-Product Enquiry
+## Deployment
 
-Contact and Support
+This project is configured for Netlify deployment and includes:
 
-Part 1 focused on planning and the basic HTML structure. Part 2 introduced CSS styling and responsive design. Part 3 adds JavaScript functionality, form validation, interactive features and search engine optimisation.
+- netlify.toml
+- sitemap.xml
+- robots.txt
 
-## Website Goals
+To deploy:
 
-The main goals of the website are to:
+1. Push the project to a GitHub repository.
+2. Connect the repository to Netlify.
+3. Set the publish directory to the project root.
+4. Deploy and verify the site.
 
-Present the Black Excellence brand and sneaker collection clearly.
+## SEO notes
 
-Make the website easy to use on desktop, tablet and mobile devices.
+The site includes basic SEO improvements such as:
 
-Allow customers to search, filter and sort sneakers.
+- keyword-focused page titles
+- metadata descriptions
+- descriptive heading hierarchy
+- social preview metadata
+- descriptive image alt text
+- responsive images and lazy loading
+- XML sitemap and robots file
 
-Allow visitors to send product and general enquiries.
+## Accessibility notes
 
-Improve the website's visibility through basic SEO techniques.
+Accessibility practices included:
 
-## Part 3 Features
+- visible focus states
+- semantic HTML
+- labels for form controls
+- skip link
+- proper contrast against dark backgrounds
+- live regions for form status messages
 
-**Shop**
+## Testing summary
 
-The Shop page includes:
+The project was checked for:
 
-Product search
+- navigation accuracy
+- search and filter behavior
+- sorting logic
+- responsive layout behavior
+- gallery lightbox interaction
+- form validation and submission flow
+- metadata and page structure
 
-Category filtering
+## Future improvements
 
-Product sorting
+Possible enhancements for a production version could include:
 
-Responsive product cards
+- real product backend and database integration
+- order submission workflow
+- more advanced analytics
+- richer gallery with thumbnails and slideshow
+- CMS-based catalogue management
 
-Sneaker image viewer
+## Final note
 
-Product information and pricing
-
-Sneaker information is loaded from the project's product catalogue using JavaScript.
-
-## Collections
-
-The Collections page includes:
-
-A featured sneaker drop
-
-Additional Black Excellence sneaker collections
-
-Responsive product images
-
-Links to the Shop and Enquiry pages
-
-## Product Enquiry Form
-
-The enquiry form allows customers to enquire about:
-
-A selected sneaker
-
-Size availability
-
-Product information
-
-Pricing and availability
-
-JavaScript is used to check that the required information has been entered correctly.
-
-## Contact Form
-
-A separate contact form is available for general customer messages and support enquiries.
-
-The form includes:
-
-Name
-
-Email address
-
-Contact category
-
-Message
-
-Form validation checks that required information is entered before submission.
-
-## Interactive Map
-
-The Contact page includes an interactive map showing the Durban and Umhlanga areas.
-
-The map uses Leaflet and OpenStreetMap.
-
-## Responsive Design
-
-The website was designed to work across different screen sizes.
-
-The main responsive breakpoints are:
-
-Desktop: above 1024px
-
-Tablet: 1024px and below
-
-Mobile: 720px and below
-
-Layouts, navigation, images and text adjust depending on the available screen size.
-
-## SEO
-
-The following search phrases were considered when writing website content:
-
-Black Excellence sneakers
-
-Durban sneaker brand
-
-South African streetwear sneakers
-
-Black and gold sneakers
-
-Lifestyle sneakers South Africa
-
-## SEO Improvements
-
-The website includes:
-
-Unique page titles
-
-Meta descriptions
-
-Clear H1, H2 and H3 heading structure
-
-Descriptive image alt text
-
-Internal links between pages
-
-Responsive images using srcset
-
-Lazy-loaded images
-
-robots.txt
-
-sitemap.xml
-
-Social media preview metadata
-
-## Performance and Security
-
-Several basic techniques were used to improve the website:
-
-Product images are available in different sizes.
-
-Images lower down the page use lazy loading.
-
-JavaScript files are stored within the project.
-
-Forms are validated before submission.
-
-No passwords or login details are stored in the source files.
-
-HTTPS can be used when the website is published through Netlify.
-
-## Website Structure
-
-BlackExcellence_Part3_Website/
-│
-├── index.html
-├── about.html
-├── products.html
-├── collections.html
-├── community.html
-├── enquiry.html
-├── contact.html
-├── thank-you.html
-│
-├── css/
-│   ├── styles.css
-│   └── part3.css
-│
-├── js/
-│   ├── logic.js
-│   └── main.js
-│
-├── data/
-│   └── products.json
-│
-├── images/
-│   ├── logo files
-│   └── sneaker images
-│
-├── screenshots/
-│   └── part3/
-│
-├── robots.txt
-├── sitemap.xml
-├── netlify.toml
-├── README.md
-└── CHANGELOG.md
-
-## Testing
-
-The website was checked at desktop, tablet and mobile screen sizes.
-
-Testing included:
-
-Navigation links
-
-Product search
-
-Product filters
-
-Product sorting
-
-Sneaker image viewer
-
-Enquiry form validation
-
-Contact form validation
-
-Responsive layouts
-
-Images and local files
-
-Testing screenshots are stored in the screenshots/part3 folder.
-
-## Publishing
-
-The website can be deployed using Netlify.
-
-Before submitting the final project:
-
-Add the correct student number.
-
-Push the final website files to the lecturer-assigned GitHub repository.
-
-Deploy the website to Netlify.
-
-Add the final website URL to the sitemap and README.
-
-Test both forms on the published website.
-
-Check the website on desktop and mobile.
-
-Submit the GitHub and published website links.
-
-## Changelog
-
-See CHANGELOG.md for the changes made throughout Parts 1, 2 and 3.
-
-## References
-
-MDN Web Docs. CSS Grid Layout.
-https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout
-
-MDN Web Docs. Responsive Images.
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Structuring_content/Responsive_images
-
-MDN Web Docs. HTML Form Validation.
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
-
-Netlify. Forms Setup.
-https://docs.netlify.com/manage/forms/setup/
-
-Netlify. Create Deploys.
-https://docs.netlify.com/deploy/create-deploys/
-
-Leaflet. JavaScript Mapping Library.
-https://leafletjs.com/
-
-OpenStreetMap Contributors.
-https://www.openstreetmap.org/copyright
+This website is designed to present Black Excellence as a premium, culturally rooted sneaker brand with a modern e-commerce feel. It balances branding, interactive functionality, and user experience while keeping the implementation lightweight and accessible.
